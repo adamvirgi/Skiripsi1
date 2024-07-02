@@ -21,7 +21,7 @@ weight = st.number_input("Enter the child's weight in kilograms:", min_value=0.0
 height = st.number_input("Enter the child's height in centimeters:", min_value=0.0)
 gender = st.selectbox("Enter the child's gender:", ["Female", "Male"])
 gender = 0 if gender == "Female" else 1
-other_feature = st.number_input("Enter the value for [other feature name]:") # Replace '[other feature name]'
+other_feature = st.text_input("Enter the value for [other feature name]:") # Replace '[other feature name]'
 
 # Make prediction
 if st.button("Predict"):
