@@ -25,5 +25,5 @@ other_feature = st.text_input("Enter the value for [other feature name]:") # Rep
 
 # Make prediction
 if st.button("Predict"):
-    predicted_status = predict_status(age, weight, height, gender, other_feature)
+    predicted_status = predict_status(age, weight, height, gender)
     st.success(f"The predicted status of the child is: {predicted_status}")
