@@ -6,8 +6,8 @@ import numpy as np
 model = joblib.load('model.joblib') # Make sure 'model.joblib' is in the same directory
 
 # Create a function to predict the status of a child
-def predict_status(age, weight, height, gender, other_feature): # Replace 'other_feature' with the actual feature name
-    input_data = np.asarray([age, weight, height, gender, other_feature])
+def predict_status(age, weight, height, gender): # Replace 'other_feature' with the actual feature name
+    input_data = np.asarray([age, weight, height, gender])
     input_data_reshaped = input_data.reshape(1, -1)
     prediction = model.predict(input_data_reshaped)
     return prediction[0]
